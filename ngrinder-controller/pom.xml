@@ -56,6 +56,9 @@
 		</dependency>
 
 
+
+
+
 		<dependency>
 			<groupId>sonia.svnkit</groupId>
 			<artifactId>svnkit</artifactId>
@@ -315,6 +318,11 @@
 		</dependency>
 
 		<!-- database driver -->
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>5.1.25</version>
+        </dependency>
 		<dependency>
 			<groupId>cubrid</groupId>
 			<artifactId>cubrid-jdbc</artifactId>
