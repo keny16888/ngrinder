@@ -16,6 +16,8 @@ package liquibase.database.core;
 import liquibase.database.AbstractDatabase;
 import liquibase.database.DatabaseConnection;
 import liquibase.exception.DatabaseException;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.math.BigInteger;
 
@@ -28,6 +30,7 @@ import java.math.BigInteger;
  */
 public class MySQLDatabase extends AbstractDatabase {
 	public static final String PRODUCT_NAME = "mysql";
+	private static final Logger LOG = LoggerFactory.getLogger(MySQLDatabase.class);
 
 	/*
 	 * (non-Javadoc)
@@ -36,11 +39,20 @@ public class MySQLDatabase extends AbstractDatabase {
 	 */
 	@Override
 	public String getDefaultDriver(String url) {
-		System.out.println("chenjinlin:="+url);
+		LOG.debug("***********="+url);
+
+
 		if (url.startsWith("jdbc:mysql")) {
 			return "com.mysql.jdbc.Driver";
 		}
 		return null;
+	}
+
+
+	@Override
+	public DatabaseConnection getConnection() {
+		//super.getc
+		return super.getConnection();
 	}
 
 	/*

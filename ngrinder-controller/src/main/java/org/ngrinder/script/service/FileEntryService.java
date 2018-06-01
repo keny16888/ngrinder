@@ -35,9 +35,9 @@ import org.springframework.scheduling.annotation.Async;
 import org.springframework.stereotype.Service;
 import org.tmatesoft.svn.core.SVNException;
 import org.tmatesoft.svn.core.SVNURL;
-import org.tmatesoft.svn.core.internal.io.fs.FSHook;
-import org.tmatesoft.svn.core.internal.io.fs.FSHookEvent;
-import org.tmatesoft.svn.core.internal.io.fs.FSHooks;
+
+import org.tmatesoft.svn.core.internal.io.fs.*;
+
 import org.tmatesoft.svn.core.wc.SVNClientManager;
 import org.tmatesoft.svn.core.wc.SVNRevision;
 

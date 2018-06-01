@@ -16,6 +16,7 @@ package org.ngrinder.infra.init;
 import liquibase.database.Database;
 import liquibase.database.DatabaseFactory;
 import liquibase.database.core.H2ExTypeConverter;
+import liquibase.database.core.MySQLTypeConverter;
 import liquibase.database.jvm.JdbcConnection;
 import liquibase.database.typeconversion.TypeConverterFactory;
 import liquibase.exception.LiquibaseException;
@@ -74,7 +75,9 @@ public class DatabaseUpdater implements ResourceLoaderAware {
 	@PostConstruct
 	public void init() throws Exception {
 		SqlGeneratorFactory.getInstance().register(new LockExDatabaseChangeLogGenerator());
-		TypeConverterFactory.getInstance().register(H2ExTypeConverter.class);
+		//TypeConverterFactory.getInstance().register(H2ExTypeConverter.class);
+		TypeConverterFactory.getInstance().register(MySQLTypeConverter.class);
+
 		LiquibaseEx liquibase = new LiquibaseEx(getChangeLog(), new ClassLoaderResourceAccessor(getResourceLoader()
 				.getClassLoader()), getDatabase());
 		// previous RenameColumnGenerator don't support Cubrid,so remove it and add new Generator
