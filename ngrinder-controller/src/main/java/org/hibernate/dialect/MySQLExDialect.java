@@ -31,5 +31,7 @@ public class MySQLExDialect extends MySQL5Dialect {
 		super();
 		registerColumnType(Types.FLOAT, "double");
 		registerColumnType(Types.BOOLEAN, "char(1)");
+		registerColumnType(Types.BLOB, "text");
+
 	}
 }

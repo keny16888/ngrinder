@@ -62,6 +62,10 @@ public class ClusterConfigurationVerifier {
 			final String dbURL = config.getDatabaseProperties().getProperty(DatabaseConstants.PROP_DATABASE_URL, "");
 			checkState(dbURL.startsWith("tcp://"), "Wrong database.url configuration " + dbURL + "\n" +
 					"When cluster mode is enabled, embedded H2 db can not be used. Use cubrid or Use H2 TCP server");
+		}else if (!db.equals("mysql")) {
+			final String dbURL = config.getDatabaseProperties().getProperty(DatabaseConstants.PROP_DATABASE_URL, "");
+			checkState(dbURL.startsWith("jdbc:mysql://"), "Wrong database.url configuration " + dbURL + "\n" +
+					"When cluster mode is enabled, embedded mysql db can not be used. Use cubrid or Use mysql TCP server");
 		}
 	}
 

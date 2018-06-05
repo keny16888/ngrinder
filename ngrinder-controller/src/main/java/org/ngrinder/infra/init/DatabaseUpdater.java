@@ -55,6 +55,7 @@ public class DatabaseUpdater implements ResourceLoaderAware {
 
 	private Database getDatabase() {
 		try {
+			System.out.println("datasorce ="+dataSource.getUrl());
 			return DatabaseFactory.getInstance().findCorrectDatabaseImplementation(
 					new JdbcConnection(dataSource.getConnection()));
 		} catch (Exception e) {

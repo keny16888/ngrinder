@@ -86,7 +86,11 @@
 			<artifactId>commons-compress</artifactId>
 			<version>1.4.1</version>
 		</dependency>
-
+		<dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+			<version>5.1.25</version>
+		</dependency>
 
 		<dependency>
 			<groupId>com.beust</groupId>

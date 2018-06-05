@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/ngrinder.iml" filepath="$PROJECT_DIR$/ngrinder.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ngrinder-controller/ngrinder-controller.iml" filepath="$PROJECT_DIR$/ngrinder-controller/ngrinder-controller.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ngrinder-core/ngrinder-core.iml" filepath="$PROJECT_DIR$/ngrinder-core/ngrinder-core.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ngrinder-groovy/ngrinder-groovy.iml" filepath="$PROJECT_DIR$/ngrinder-groovy/ngrinder-groovy.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ngrinder-runtime/ngrinder-runtime.iml" filepath="$PROJECT_DIR$/ngrinder-runtime/ngrinder-runtime.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ngrinder-sh/ngrinder-sh.iml" filepath="$PROJECT_DIR$/ngrinder-sh/ngrinder-sh.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ngrinder-starter/ngrinder-starter.iml" filepath="$PROJECT_DIR$/ngrinder-starter/ngrinder-starter.iml" />
+    </modules>
+  </component>
+</project>

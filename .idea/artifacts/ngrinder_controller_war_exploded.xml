@@ -1,0 +1,154 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="ngrinder-controller:war exploded">
+    <output-path>$PROJECT_DIR$/ngrinder-controller/target/ngrinder-controller-3.4.1</output-path>
+    <root id="root">
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="ngrinder-controller" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="Maven: com.beust:jcommander:1.32" />
+          <element id="library" level="project" name="Maven: rome:rome:1.0" />
+          <element id="library" level="project" name="Maven: jdom:jdom:1.0" />
+          <element id="library" level="project" name="Maven: com.ibm.icu:icu4j:4.6" />
+          <element id="library" level="project" name="Maven: sonia.svnkit:svnkit:1.8.3-scm1" />
+          <element id="library" level="project" name="Maven: sonia.svnkit:svnkit-dav:1.8.3-scm1" />
+          <element id="library" level="project" name="Maven: org.tmatesoft.sqljet:sqljet:1.1.1" />
+          <element id="library" level="project" name="Maven: org.antlr:antlr-runtime:3.4" />
+          <element id="library" level="project" name="Maven: javax.servlet.jsp:jsp-api:2.1" />
+          <element id="library" level="project" name="Maven: org.python:jython-standalone:2.5.3" />
+          <element id="archive" name="ngrinder-core-3.4.1.jar">
+            <element id="module-output" name="ngrinder-core" />
+          </element>
+          <element id="library" level="project" name="Maven: org.hibernate:hibernate-core:4.2.2.Final" />
+          <element id="library" level="project" name="Maven: antlr:antlr:2.7.7" />
+          <element id="library" level="project" name="Maven: dnsjava:dnsjava:2.1.1" />
+          <element id="library" level="project" name="Maven: sigar:sigar-native:1.0" />
+          <element id="library" level="project" name="Maven: sigar:sigar-native-deps:1.6.4" />
+          <element id="archive" name="ngrinder-runtime-3.4.1.jar">
+            <element id="module-output" name="ngrinder-runtime" />
+          </element>
+          <element id="archive" name="ngrinder-groovy-3.4.1.jar">
+            <element id="module-output" name="ngrinder-groovy" />
+          </element>
+          <element id="library" level="project" name="Maven: org.codehaus.groovy:groovy-all:2.2.1" />
+          <element id="library" level="project" name="Maven: org.json:json:20090211" />
+          <element id="library" level="project" name="Maven: net.java.dev.jna:jna:3.4.0" />
+          <element id="library" level="project" name="Maven: org.apache.commons:commons-compress:1.4.1" />
+          <element id="library" level="project" name="Maven: org.tukaani:xz:1.0" />
+          <element id="library" level="project" name="Maven: org.apache.commons:commons-math3:3.6.1" />
+          <element id="library" level="project" name="Maven: org.hamcrest:hamcrest-all:1.1" />
+          <element id="library" level="project" name="Maven: org.fusesource:sigar:1.6.4" />
+          <element id="library" level="project" name="Maven: log4j:log4j:1.2.15" />
+          <element id="archive" name="ngrinder-sh-3.4.1.jar">
+            <element id="module-output" name="ngrinder-sh" />
+          </element>
+          <element id="library" level="project" name="Maven: org.freemarker:freemarker:2.3.20" />
+          <element id="library" level="project" name="Maven: org.reflections:reflections:0.9.8" />
+          <element id="library" level="project" name="Maven: javassist:javassist:3.12.1.GA" />
+          <element id="library" level="project" name="Maven: dom4j:dom4j:1.6.1" />
+          <element id="library" level="project" name="Maven: xml-apis:xml-apis:1.0.b2" />
+          <element id="library" level="project" name="Maven: net.sf.ehcache:ehcache-core:2.5.1" />
+          <element id="library" level="project" name="Maven: com.google.guava:guava:12.0" />
+          <element id="library" level="project" name="Maven: com.google.code.findbugs:jsr305:1.3.9" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-web:4.2.5.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-aop:4.2.5.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-beans:4.2.5.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-core:4.2.5.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-tx:4.2.5.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-context-support:4.2.5.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-aspects:4.2.5.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-expression:4.2.5.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework.security:spring-security-web:4.0.4.RELEASE" />
+          <element id="library" level="project" name="Maven: aopalliance:aopalliance:1.0" />
+          <element id="library" level="project" name="Maven: org.springframework.security:spring-security-core:4.0.4.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework.security:spring-security-taglibs:4.0.4.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework.security:spring-security-acl:4.0.4.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework.security:spring-security-config:4.0.4.RELEASE" />
+          <element id="library" level="project" name="Maven: org.apache.maven:maven-embedder:3.0.5" />
+          <element id="library" level="project" name="Maven: org.apache.maven:maven-settings:3.0.5" />
+          <element id="library" level="project" name="Maven: org.apache.maven:maven-core:3.0.5" />
+          <element id="library" level="project" name="Maven: org.apache.maven:maven-model:3.0.5" />
+          <element id="library" level="project" name="Maven: org.apache.maven:maven-settings-builder:3.0.5" />
+          <element id="library" level="project" name="Maven: org.apache.maven:maven-repository-metadata:3.0.5" />
+          <element id="library" level="project" name="Maven: org.apache.maven:maven-artifact:3.0.5" />
+          <element id="library" level="project" name="Maven: org.apache.maven:maven-aether-provider:3.0.5" />
+          <element id="library" level="project" name="Maven: org.sonatype.aether:aether-impl:1.13.1" />
+          <element id="library" level="project" name="Maven: org.codehaus.plexus:plexus-interpolation:1.14" />
+          <element id="library" level="project" name="Maven: org.apache.maven:maven-plugin-api:3.0.5" />
+          <element id="library" level="project" name="Maven: org.apache.maven:maven-model-builder:3.0.5" />
+          <element id="library" level="project" name="Maven: org.apache.maven:maven-compat:3.0.5" />
+          <element id="library" level="project" name="Maven: org.apache.maven.wagon:wagon-provider-api:2.4" />
+          <element id="library" level="project" name="Maven: org.codehaus.plexus:plexus-utils:2.0.6" />
+          <element id="library" level="project" name="Maven: org.codehaus.plexus:plexus-classworlds:2.4" />
+          <element id="library" level="project" name="Maven: org.sonatype.sisu:sisu-inject-plexus:2.3.0" />
+          <element id="library" level="project" name="Maven: org.sonatype.sisu:sisu-inject-bean:2.3.0" />
+          <element id="library" level="project" name="Maven: org.sonatype.sisu:sisu-guice:no_aop:3.1.0" />
+          <element id="library" level="project" name="Maven: org.sonatype.sisu:sisu-guava:0.9.9" />
+          <element id="library" level="project" name="Maven: org.codehaus.plexus:plexus-component-annotations:1.5.5" />
+          <element id="library" level="project" name="Maven: org.sonatype.plexus:plexus-sec-dispatcher:1.3" />
+          <element id="library" level="project" name="Maven: org.sonatype.plexus:plexus-cipher:1.7" />
+          <element id="library" level="project" name="Maven: commons-cli:commons-cli:1.2" />
+          <element id="library" level="project" name="Maven: org.sonatype.aether:aether-connector-asynchttpclient:1.13.1" />
+          <element id="library" level="project" name="Maven: org.sonatype.aether:aether-api:1.13.1" />
+          <element id="library" level="project" name="Maven: org.sonatype.aether:aether-spi:1.13.1" />
+          <element id="library" level="project" name="Maven: org.sonatype.aether:aether-util:1.13.1" />
+          <element id="library" level="project" name="Maven: com.ning:async-http-client:1.6.5" />
+          <element id="library" level="project" name="Maven: org.jboss.netty:netty:3.2.5.Final" />
+          <element id="library" level="project" name="Maven: org.springframework.data:spring-data-jpa:1.9.4.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework.data:spring-data-commons:1.11.4.RELEASE" />
+          <element id="library" level="project" name="Maven: org.liquibase:liquibase-core:2.0.5" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-context:4.2.5.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-orm:4.2.5.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-jdbc:4.2.5.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-webmvc:4.2.5.RELEASE" />
+          <element id="library" level="project" name="Maven: org.hibernate.javax.persistence:hibernate-jpa-2.0-api:1.0.0.Final" />
+          <element id="library" level="project" name="Maven: org.hibernate:hibernate-entitymanager:4.2.2.Final" />
+          <element id="library" level="project" name="Maven: org.jboss.logging:jboss-logging:3.1.0.GA" />
+          <element id="library" level="project" name="Maven: org.jboss.spec.javax.transaction:jboss-transaction-api_1.1_spec:1.0.1.Final" />
+          <element id="library" level="project" name="Maven: org.hibernate.common:hibernate-commons-annotations:4.0.2.Final" />
+          <element id="library" level="project" name="Maven: org.javassist:javassist:3.15.0-GA" />
+          <element id="library" level="project" name="Maven: org.aspectj:aspectjrt:1.6.12" />
+          <element id="library" level="project" name="Maven: org.aspectj:aspectjweaver:1.6.12" />
+          <element id="library" level="project" name="Maven: mysql:mysql-connector-java:5.1.25" />
+          <element id="library" level="project" name="Maven: cubrid:cubrid-jdbc:8.4.1.2032" />
+          <element id="library" level="project" name="Maven: org.ngrinder:universal-analytics-java:1.0" />
+          <element id="library" level="project" name="Maven: commons-httpclient:commons-httpclient:3.1" />
+          <element id="library" level="project" name="Maven: commons-logging:commons-logging:1.0.4" />
+          <element id="library" level="project" name="Maven: commons-codec:commons-codec:1.2" />
+          <element id="library" level="project" name="Maven: com.h2database:h2:1.3.168" />
+          <element id="library" level="project" name="Maven: commons-fileupload:commons-fileupload:1.3.1" />
+          <element id="library" level="project" name="Maven: commons-dbcp:commons-dbcp:1.4" />
+          <element id="library" level="project" name="Maven: commons-pool:commons-pool:1.5.4" />
+          <element id="library" level="project" name="Maven: cglib:cglib:2.2.2" />
+          <element id="library" level="project" name="Maven: com.google.code.gson:gson:2.2" />
+          <element id="library" level="project" name="Maven: jaxen:jaxen:1.1.4" />
+          <element id="library" level="project" name="Maven: ro.fortsoft.pf4j:pf4j:0.12.0" />
+          <element id="library" level="project" name="Maven: com.github.zafarkhaja:java-semver:0.9.0" />
+          <element id="library" level="project" name="Maven: ro.fortsoft.pf4j:pf4j-spring:0.2.0" />
+          <element id="library" level="project" name="Maven: commons-collections:commons-collections:3.2.1" />
+          <element id="library" level="project" name="Maven: com.navercorp.lucy:lucy-xss-servlet:2.0.0" />
+          <element id="library" level="project" name="Maven: org.apache.commons:commons-lang3:3.3.2" />
+          <element id="library" level="project" name="Maven: com.navercorp.lucy:lucy-xss:1.6.3" />
+          <element id="library" level="project" name="Maven: ch.qos.logback:logback-classic:1.0.0" />
+          <element id="library" level="project" name="Maven: ch.qos.logback:logback-core:1.0.0" />
+          <element id="library" level="project" name="Maven: org.slf4j:jcl-over-slf4j:1.6.4" />
+          <element id="library" level="project" name="Maven: org.slf4j:slf4j-api:1.6.4" />
+          <element id="library" level="project" name="Maven: asm:asm:3.3.1" />
+          <element id="library" level="project" name="Maven: net.sf.grinder:grinder-dcr-agent:3.9.1" />
+          <element id="library" level="project" name="Maven: net.sf.grinder:grinder-http:3.9.1" />
+          <element id="library" level="project" name="Maven: net.sf.grinder:grinder-core:3.9.1" />
+          <element id="library" level="project" name="Maven: org.picocontainer:picocontainer:2.13.6" />
+          <element id="library" level="project" name="Maven: net.sf.grinder:grinder-httpclient:3.9.1" />
+          <element id="library" level="project" name="Maven: grinder:grinder-patch:3.9.1-patch" />
+          <element id="library" level="project" name="Maven: commons-io:commons-io:2.0.1" />
+          <element id="library" level="project" name="Maven: commons-lang:commons-lang:2.6" />
+        </element>
+      </element>
+      <element id="directory" name="META-INF">
+        <element id="file-copy" path="$PROJECT_DIR$/ngrinder-controller/target/ngrinder-controller-3.4.1/META-INF/MANIFEST.MF" />
+      </element>
+      <element id="javaee-facet-resources" facet="ngrinder-controller/web/Web" />
+    </root>
+  </artifact>
+</component>

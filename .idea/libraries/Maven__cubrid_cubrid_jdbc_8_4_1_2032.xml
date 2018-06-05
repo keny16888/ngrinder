@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: cubrid:cubrid-jdbc:8.4.1.2032">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/cubrid/cubrid-jdbc/8.4.1.2032/cubrid-jdbc-8.4.1.2032.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/cubrid/cubrid-jdbc/8.4.1.2032/cubrid-jdbc-8.4.1.2032-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/cubrid/cubrid-jdbc/8.4.1.2032/cubrid-jdbc-8.4.1.2032-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

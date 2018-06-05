@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="ngrinder-controller:war">
+    <output-path>$PROJECT_DIR$/ngrinder-controller/target</output-path>
+    <root id="archive" name="ngrinder-controller-3.4.1.war">
+      <element id="artifact" artifact-name="ngrinder-controller:war exploded" />
+    </root>
+  </artifact>
+</component>
