@@ -5,6 +5,6 @@
     http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
 
 	<changeSet author="ngrinder.3.1.2" id="18" dbms="h2, cubrid">
-		<modifyDataType tableName="PERF_TEST" columnName="agent_stat" newDataType="blob"/>
+		<modifyDataType tableName="PERF_TEST" columnName="agent_stat" newDataType="varchar(10000)"/>
 	</changeSet>
 </databaseChangeLog>

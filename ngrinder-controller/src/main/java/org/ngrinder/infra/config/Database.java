@@ -20,7 +20,7 @@ import org.apache.commons.lang.StringUtils;
 import org.hibernate.dialect.CUBRIDExDialect;
 import org.hibernate.dialect.Dialect;
 import org.hibernate.dialect.H2ExDialect;
-import org.hibernate.dialect.MySQL5Dialect;
+import org.hibernate.dialect.MySQLExDialect;
 import org.ngrinder.common.util.PropertiesWrapper;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -76,7 +76,7 @@ public enum Database {
 	 * mysql
 	 */
 
-	mysql(com.mysql.jdbc.Driver.class, MySQL5Dialect.class, "jdbc:mysql:%s/test", false) {
+	mysql(com.mysql.jdbc.Driver.class, MySQLExDialect.class, "jdbc:mysql:%s/test", false) {
 		@Override
 		protected void setupVariants(BasicDataSource dataSource, PropertiesWrapper databaseProperties) {
 			String format = String.format(getUrlTemplate(), databaseProperties.getProperty("NGRINDER_HOME", "."));

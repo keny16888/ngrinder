@@ -62,7 +62,7 @@ public class MySQLTypeConverter extends AbstractTypeConverter {
 	 */
 	@Override
 	public boolean supports(Database database) {
-		return "cubrid".equals(database.getTypeName());
+		return "mysql".equals(database.getTypeName());
 	}
 
 	/*
@@ -98,7 +98,7 @@ public class MySQLTypeConverter extends AbstractTypeConverter {
 	 */
 	@Override
 	public DateTimeType getDateTimeType() {
-		return new DateTimeType("TIMESTAMP");
+		return new DateTimeType("datetime");
 	}
 
 	/*

@@ -6,10 +6,10 @@
 
 	<changeSet author="ngrinder.3.1.1" id="14" dbms="h2, cubrid">
 		<addColumn tableName="PERF_TEST">
-			<column name="agent_stat" type="blob" />
+			<column name="agent_stat" type="varchar(2000)" />
 		</addColumn>
 		<addColumn tableName="PERF_TEST">
-			<column name="running_sample" type="blob" />
+			<column name="running_sample" type="varchar(10000)" />
 		</addColumn>
 	</changeSet>
 </databaseChangeLog>
