@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="ngrinder-controller" />
+        <module name="ngrinder-core" />
+        <module name="ngrinder-groovy" />
+        <module name="ngrinder-runtime" />
+        <module name="ngrinder-sh" />
+        <module name="ngrinder-starter" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="ngrinder" target="1.6" />
+      <module name="ngrinder-controller" target="1.7" />
+      <module name="ngrinder-core" target="1.6" />
+      <module name="ngrinder-groovy" target="1.6" />
+      <module name="ngrinder-runtime" target="1.6" />
+      <module name="ngrinder-sh" target="1.5" />
+      <module name="ngrinder-starter" target="1.6" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

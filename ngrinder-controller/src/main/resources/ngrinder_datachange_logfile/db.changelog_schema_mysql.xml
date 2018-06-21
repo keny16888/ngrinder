@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-2.0.xsd
+    http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
+   
+	<changeSet author="initialDB" id="7" dbms="mysql">
+		<validCheckSum/>
+		<preConditions onFail="MARK_RAN">
+		 	<not>
+            	<tableExists tableName="TAG"/>
+         	</not>
+        </preConditions>
+        <comment>DB initialization.</comment>
+	    <sql>
+			drop table if exists AGENT;
+
+			drop table if exists NUSER;
+
+			drop table if exists PERF_TEST;
+
+			drop table if exists PERF_TEST_TAG;
+
+			drop table if exists TAG;
+
+			drop table if exists system_monitor;
+
+			CREATE TABLE `AGENT` (
+			`id` bigint(20) NOT NULL AUTO_INCREMENT,
+			`approved` char(1) NOT NULL,
+			`hostName` varchar(255) DEFAULT NULL,
+			`ip` varchar(255) DEFAULT NULL,
+			`port` int(11) DEFAULT '0',
+			`region` varchar(255) DEFAULT NULL,
+			`state` varchar(20) DEFAULT NULL,
+			`version` varchar(256) DEFAULT '',
+			`system_stat` varchar(2000) DEFAULT NULL,
+			PRIMARY KEY (`id`)
+			);
+
+			CREATE TABLE `NUSER` (
+			`id` bigint(20) NOT NULL AUTO_INCREMENT,
+			`created_date` datetime DEFAULT NULL,
+			`last_modified_date` datetime DEFAULT NULL,
+			`authentication_provider_class` varchar(255) DEFAULT NULL,
+			`description` varchar(255) DEFAULT NULL,
+			`email` varchar(255) DEFAULT NULL,
+			`enabled` char(1) NOT NULL DEFAULT 'T',
+			`is_external` char(2) DEFAULT 'F',
+			`mobile_phone` varchar(255) DEFAULT NULL,
+			`password` varchar(255) DEFAULT NULL,
+			`role_name` varchar(255) NOT NULL,
+			`timeZone` varchar(255) DEFAULT NULL,
+			`user_id` varchar(255) NOT NULL,
+			`user_language` varchar(255) DEFAULT NULL,
+			`user_name` varchar(255) DEFAULT NULL,
+			`created_user` bigint(20) DEFAULT NULL,
+			`last_modified_user` bigint(20) DEFAULT NULL,
+			PRIMARY KEY (`id`),
+			UNIQUE KEY `user_id` (`user_id`)
+			);
+
+
+
+			CREATE TABLE `PERF_TEST` (
+			`id` bigint(20) NOT NULL AUTO_INCREMENT,
+			`created_date` datetime DEFAULT NULL,
+			`last_modified_date` datetime DEFAULT NULL,
+			`agent_count` int(11) DEFAULT NULL,
+			`safe_distribution` char(1) DEFAULT 'F',
+			`description` varchar(2048) DEFAULT NULL,
+			`distribution_path` varchar(255) DEFAULT NULL,
+			`duration` bigint(20) DEFAULT NULL,
+			`errors` bigint(20) DEFAULT NULL,
+			`finish_time` datetime DEFAULT NULL,
+			`ignore_sample_count` int(11) DEFAULT NULL,
+			`init_processes` int(11) DEFAULT NULL,
+			`init_sleep_time` int(11) DEFAULT NULL,
+			`last_progress_message` varchar(2048) DEFAULT NULL,
+			`mean_test_time` double DEFAULT NULL,
+			`peak_tps` double DEFAULT NULL,
+			`errorRate` double DEFAULT NULL,
+			`minRT` double DEFAULT NULL,
+			`pct25RT` double DEFAULT NULL,
+			`pct50RT` double DEFAULT NULL,
+			`pct75RT` double DEFAULT NULL,
+			`pct90RT` double DEFAULT NULL,
+			`pct95RT` double DEFAULT NULL,
+			`pct99RT` double DEFAULT NULL,
+			`maxRT` double DEFAULT NULL,
+			`port` int(11) DEFAULT NULL,
+			`process_increment` int(11) DEFAULT NULL,
+			`process_increment_interval` int(11) DEFAULT NULL,
+			`processes` int(11) DEFAULT NULL,
+			`progress_message` varchar(2048) DEFAULT NULL,
+			`run_count` int(11) DEFAULT NULL,
+			`scheduled_time` datetime DEFAULT NULL,
+			`script_name` varchar(255) DEFAULT NULL,
+			`script_revision` bigint(20) DEFAULT NULL,
+			`send_mail` char(1) DEFAULT 'F',
+			`start_time` datetime DEFAULT NULL,
+			`status` varchar(255) DEFAULT NULL,
+			`stop_request` char(1) DEFAULT 'F',
+			`tag_string` varchar(255) DEFAULT NULL,
+
+			`test_comment` varchar(2048) DEFAULT NULL,
+			`test_error_cause` varchar(255) DEFAULT NULL,
+			`name` varchar(255) DEFAULT NULL,
+			`test_time_standard_deviation` double DEFAULT NULL,
+			`tests` bigint(20) DEFAULT NULL,
+			`threads` int(11) DEFAULT NULL,
+			`threshold` varchar(255) DEFAULT NULL,
+			`tps` double DEFAULT NULL,
+			`use_rampup` char(1) DEFAULT NULL,
+			`vuser_per_agent` int(11) DEFAULT NULL,
+			`created_user` bigint(20) DEFAULT NULL,
+			`last_modified_user` bigint(20) DEFAULT NULL,
+			`ramp_up_type` varchar(10) DEFAULT 'PROCESS',
+			`ramp_up_init_count` int(11) DEFAULT NULL,
+			`ramp_up_init_sleep_time` int(11) DEFAULT NULL,
+			`ramp_up_step` int(11) DEFAULT NULL,
+			`ramp_up_increment_interval` int(11) DEFAULT NULL,
+			`sampling_interval` int(11) DEFAULT '1',
+			`agent_stat` text,
+			`running_sample` text,
+			`target_hosts` text DEFAULT NULL,
+			`monitor_stat` varchar(2000) DEFAULT NULL,
+			`param` varchar(256) DEFAULT '',
+			`region` varchar(256) DEFAULT NULL,
+			PRIMARY KEY (`id`)
+			);
+
+			create table PERF_TEST_TAG (
+		        perf_test_id bigint not null,
+		        tag_id bigint not null,
+		        primary key (perf_test_id, tag_id)
+		    );
+		
+		    create table TAG (
+			    id bigint(20) not null auto_increment,
+		        created_date datetime,
+		        last_modified_date datetime,
+		        tagValue varchar(255),
+		        created_user bigint,
+		        last_modified_user bigint,
+		        primary key (id)
+		    );
+		
+		    create table system_monitor (
+			    id bigint(20) not null auto_increment,
+		        collect_time bigint,
+		        cpu_used_percentage double,
+		        crtime varchar(255),
+		        free_memory bigint,
+		        idle_cpu_value double,
+		        ip varchar(255),
+		        monitor_key varchar(255),
+		        load_avg_1 double,
+		        load_avg_15 double,
+		        load_avg_5 double,
+		        message varchar(255),
+		        port integer not null,
+		        system varchar(255),
+		        total_cpu_value double,
+		        total_memory bigint,
+		        primary key (id)
+		    );
+		
+		    create index last_modified_user_index_NUSER on NUSER (last_modified_user);
+		
+		    create index created_user_index on NUSER (created_user);
+		
+			create index last_modified_user_index_PERF_TEST on PERF_TEST (last_modified_user);
+		
+		    create index created_user_index_PERF_TEST on PERF_TEST (created_user);
+		
+		    create index scheduled_time_index on PERF_TEST (scheduled_time);
+		
+		    create index last_modified_user_index_TAG on TAG (last_modified_user);
+		
+		    create index created_user_index_TAG on TAG (created_user);
+
+		    create index monitor_key_index on system_monitor (monitor_key);
+		
+		    create index collect_time_index on system_monitor (collect_time);
+		
+		    create index ip_index on system_monitor (ip);
+						   
+    			
+	    </sql>
+    </changeSet>
+</databaseChangeLog>

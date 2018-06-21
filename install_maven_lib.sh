@@ -20,6 +20,6 @@ if [[ ! -f ~/.m2/repository/sonia/svnkit/svnkit-dav/1.8.3-scm1/svnkit-dav-1.8.3-
         ./mvnw install:install-file -Dfile=lib/svnkit-dav-1.8.3-scm1.jar -DgroupId=sonia.svnkit -DartifactId=svnkit-dav -Dversion=1.8.3-scm1 -Dpackaging=jar -DcreateChecksum=true
 fi
 
-if [[ ! -f ~/.m2/repository/org/tmatesoft/svn/svnkit/1.3.5/svnkit-1.3.5.jar ]] ; then
-        ./mvnw install:install-file -Dfile=lib/svnkit-1.3.5.jar -DgroupId=org.tmatesoft.svn -DartifactId=svnkit -Dversion=1.3.5 -Dpackaging=jar -DcreateChecksum=true
+if [[ ! -f ~/.m2/repository/org/tmatesoft/svnkit/svnkit/1.3.5/svnkit-1.3.5.jar ]] ; then
+        ./mvnw install:install-file -Dfile=lib/svnkit-1.3.5.jar -DgroupId=org.tmatesoft.svnkit -DartifactId=svnkit -Dversion=1.3.5 -Dpackaging=jar -DcreateChecksum=true
 fi

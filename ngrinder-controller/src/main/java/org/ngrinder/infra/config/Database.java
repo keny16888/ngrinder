@@ -14,11 +14,13 @@
 package org.ngrinder.infra.config;
 
 import cubrid.jdbc.driver.CUBRIDDriver;
+//import com.mysql.jdbc.Driver;
 import org.apache.commons.dbcp.BasicDataSource;
 import org.apache.commons.lang.StringUtils;
 import org.hibernate.dialect.CUBRIDExDialect;
 import org.hibernate.dialect.Dialect;
 import org.hibernate.dialect.H2ExDialect;
+import org.hibernate.dialect.MySQLExDialect;
 import org.ngrinder.common.util.PropertiesWrapper;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -60,6 +62,29 @@ public enum Database {
 			final String databaseURL = databaseProperties.getProperty(DatabaseConfig.PROP_DATABASE_URL);
 			if (databaseURL.startsWith("tcp://")) {
 				format = "jdbc:h2:" + databaseURL;
+			}
+			if (databaseProperties.exist("unit-test")) {
+				format = format + ";DB_CLOSE_ON_EXIT=FALSE";
+			}
+			dataSource.setUrl(format);
+			dataSource.setUsername(databaseProperties.getProperty(DatabaseConfig.PROP_DATABASE_USERNAME));
+			dataSource.setPassword(databaseProperties.getProperty(DatabaseConfig.PROP_DATABASE_PASSWORD));
+		}
+	},
+
+	/**
+	 * mysql
+	 */
+
+	mysql(com.mysql.jdbc.Driver.class, MySQLExDialect.class, "jdbc:mysql:%s/test", false) {
+		@Override
+		protected void setupVariants(BasicDataSource dataSource, PropertiesWrapper databaseProperties) {
+			String format = String.format(getUrlTemplate(), databaseProperties.getProperty("NGRINDER_HOME", "."));
+
+			final String databaseURL = databaseProperties.getProperty(DatabaseConfig.PROP_DATABASE_URL);
+			if (databaseURL.startsWith("jdbc:mysql://")) {
+				//format = "jdbc:mysql:" + databaseURL;
+				format =   databaseURL;
 			}
 			if (databaseProperties.exist("unit-test")) {
 				format = format + ";DB_CLOSE_ON_EXIT=FALSE";
